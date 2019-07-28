@@ -10,7 +10,7 @@ import com.drkiettran.mongodb.model.Plane;
 import com.drkiettran.mongodb.repository.PlaneRepositoryImpl;
 
 @RestController
-//@RequestMapping("/planes")
+
 public class PlaneController {
 	@Autowired
 	PlaneRepositoryImpl repository;

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "airports")
 public class Airport {
-	@Id
+	
 	private String id;
 
 	private String iata;

@@ -9,6 +9,6 @@ import com.drkiettran.mongodb.model.Carrier;
 public interface CarrierRepository extends MongoRepository<Carrier, String> {
 
 	@Query("{iata:'?0'}")
-	Carrier findByIata(@Param("iata") String iata);
+	Carrier findByCode(@Param("Code") String iata);
 
 }
