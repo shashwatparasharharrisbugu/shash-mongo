@@ -9,10 +9,14 @@ http://stat-computing.org/dataexpo/2009/supplemental-data.html
 ## Import data into collections
 
 ```
-cd ~/dev/airline
-mongoimport --db airline --collection planes --type csv --headerline --file ./plane-data.csv
-mongoimport --db airline --collection carriers --type csv --headerline --file ./carriers.csv
-mongoimport --db airline --collection airports --type csv --headerline --file ./airports.csv
+Use cloud MongoD for connection
+https://docs.atlas.mongodb.com/
+
+https://cloud.mongodb.com/v2/5d3d9b90ff7a253c71f2667f#clusters
+Connection through command line
+mongo "mongodb+srv://cluster0-popyd.mongodb.net/test" --username <username>
+username: 
+admin
 ```
 
 
@@ -60,14 +64,18 @@ java -jar target/mongodb-0.0.1-SNAPSHOT.jar
 ## Postman test URLs:
 
 ```
-http://localhost:8080/airports?iata=06N
-http://localhost:8080/planes?tailnum=N104UA
+http://localhost:8080/airports?iata="06N"
+http://localhost:8080/planes?tailnum=N055AA
+http://localhost:8080/carrier?code="02Q"
+http://localhost:8080/weather?location=London,uk
 ```
 
 ## Curl
 
 ```
 curl http://localhost:8080/airports?iata=06N
-curl http://localhost:8080/planes?tailnum=N104UA
+curl http://localhost:8080/planes?tailnum=N055AA
+curl http://localhost:8080/carrier?code="02Q"
+curl http://localhost:8080/weather?location=London,uk
 ```
 
